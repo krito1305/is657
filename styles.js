@@ -5,7 +5,7 @@ import { StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#E8EAED',
+      backgroundColor: '#121B2D'
       
     },
     tasksWrapper:{
@@ -13,10 +13,12 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20
     },
     sectionTitle: {
-        fontSize: 24, 
+        fontSize: 48, 
+        fontFamily: "verdana",
         fontWeight: "bold",
-        justifyContent: "center",
-        marginBottom: 15
+        alignSelf: "center",
+        marginBottom: 15,
+        color: "#FFFFFF"
     },
     items: {
       marginTop: 30
@@ -26,38 +28,44 @@ export const styles = StyleSheet.create({
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-evenly",
-      backgroundColor: "white",
+      backgroundColor: "#223966",
       padding: 15,
       borderRadius: 10,
-      marginBottom: 15
+      marginBottom: 15,
+      opacity: 0.75
     },
     iconLeft: {
      },
     square: {
-      width: 24,
-      height: 24,
-      backgroundColor: '#50BDFB',
-      opacity: 0.6,
+      width: 26,
+      height: 26,
+      backgroundColor: '#4CCFF9',
+      opacity: 0.75,
       borderRadius: 5,
       marginRight: 15
     },
     taskText: {
       flex: 3,
+      fontSize: 14,
+      fontFamily: "verdana",
       maxWidth: "80%",
-      justifyContent: "flex-start"
+      justifyContent: "flex-start",
+      color: "#FFFFFF"
     },
     circleRight: {
-      width: 12,
-      height: 12,
+      width: 26,
+      height: 26,
       borderWidth: 2,
-      borderRadius: 5,
-      borderColor: '#50BDFB'
+      borderRadius: 20,
+      borderColor: '#FFFFFF',
+      backgroundColor: '#FFFFFF'
     },
     WriteTaskWrapper: {
       width: "90%",
       flexDirection: "row",
       marginHorizontal: 20,
       marginRight: 20,
+      marginTop: 30,
       justifyContent: "space-between",
       alignItems: "center"
       },
@@ -70,8 +78,8 @@ export const styles = StyleSheet.create({
       borderWidth: 1
     },
     addWrapper: {
-      width: 60,
-      height: 60,
+      width: 52,
+      height: 52,
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "white",
