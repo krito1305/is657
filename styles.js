@@ -56,9 +56,9 @@ export const styles = StyleSheet.create({
       width: 26,
       height: 26,
       borderWidth: 2,
-      borderRadius: 20,
       borderColor: '#FFFFFF',
-      backgroundColor: '#FFFFFF'
+      backgroundColor: '#FFFFFF',
+      cursor: "pointer"
     },
     WriteTaskWrapper: {
       width: "90%",

@@ -5,25 +5,15 @@ import {styles} from './styles';
 import Task from './components/Task'
 
 export default function App() {
+  // Task is the name of the state and setTask is the function we are going to use to set the state of Task
   const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
     Keyboard.dismiss();
-    setTaskItems ([...taskItems, task]);
+    setTaskItems([...taskItems, task])
     setTask(null)
-    return (
-    console.log(task),
-    console.log(taskItems))
       };
-  
-  
-  const completedTask = (index) => {
-    let itemsCopy = [...taskItems];
-    // Removing item with index X from the itemsCopy array and replacing the taskItems array with that one
-    itemsCopy.splice(index,1);
-    setTaskItems(itemsCopy);
-  }
 
   return (
     <View style={styles.container}>
@@ -34,11 +24,11 @@ export default function App() {
 
         <View style={styles.items}>
           {/* The items will go in here
-            The map method creates a new array populated with the rsults of calling a provided function on every element in the calling array */}
-          <Task text={"Task 1"}></Task>
-          <Task text={"Task 2"}></Task>
-          <Task text={"Task 3"}></Task>
-
+            The map method creates a new array populated with the rsults of calling a provided function on every element in the calling array */
+            taskItems.map((item, index) =>{
+              return <Task text={item} key={index}/>
+            })
+            }
         </View>
 
       </View>
@@ -48,7 +38,7 @@ export default function App() {
       <KeyboardAvoidingView 
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       style={styles.WriteTaskWrapper}>
-        <TextInput style={styles.input} placeholder={"Add a new task"}>
+        <TextInput style={styles.input} placeholder={"Add a new task"} value={task} onChangeText={text => setTask(text)}>
         </TextInput>
 
         <TouchableOpacity onPress={() => handleAddTask()}>
