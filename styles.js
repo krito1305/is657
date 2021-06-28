@@ -37,12 +37,14 @@ export const styles = StyleSheet.create({
     iconLeft: {
      },
     square: {
-      width: 26,
       height: 26,
       backgroundColor: '#4CCFF9',
+      paddingHorizontal: 5,
       opacity: 0.75,
       borderRadius: 5,
-      marginRight: 15
+      marginRight: 15,
+      alignItems: "center",
+      justifyContent: "center"
     },
     taskText: {
       flex: 3,
@@ -58,7 +60,8 @@ export const styles = StyleSheet.create({
       borderWidth: 2,
       borderColor: '#FFFFFF',
       backgroundColor: '#FFFFFF',
-      cursor: "pointer"
+      cursor: "pointer",
+      marginRight: 15
     },
     WriteTaskWrapper: {
       width: "90%",

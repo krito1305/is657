@@ -7,28 +7,42 @@ import Task from './components/Task'
 export default function App() {
   // Task is the name of the state and setTask is the function we are going to use to set the state of Task
   const [task, setTask] = useState();
+  // taskItems is an array of the tasks that have been added
   const [taskItems, setTaskItems] = useState([]);
+  
 
   const handleAddTask = () => {
     Keyboard.dismiss();
     setTaskItems([...taskItems, task])
     setTask(null)
+    console.log(task)
+    console.log(taskItems.map)
+ 
       };
+
+  const deleteTask = (index) => {
+    let itemsCopy = [...taskItems];
+    itemsCopy.splice(index, 1);
+    setTaskItems(itemsCopy);
+  };
+  
 
   return (
     <View style={styles.container}>
       
       {/* Today's Tasks */}
       <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Today's Tasks</Text>
+        <Text style={styles.sectionTitle}>To-do Items</Text>
 
         <View style={styles.items}>
           {/* The items will go in here
             The map method creates a new array populated with the rsults of calling a provided function on every element in the calling array */
-            taskItems.map((item, index) =>{
-              return <Task text={item} key={index}/>
+          taskItems.map((item,index) => {
+            return <Task text={item} key={index} />
             })
-            }
+                   
+          }
+
         </View>
 
       </View>
