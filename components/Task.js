@@ -5,29 +5,27 @@ import { styles } from '../styles';
 
 
 
-
-function Task(props) {
+function Task(props, index, item) {
     const [isCompleted, setSelection] = useState(false);
 
-    function markedCompleted() {
-    const boxValue = isCompleted
-    if (boxValue == 'true') {
 
-    }
+      const deleteTask = (index) => {
+        console.log(index)
+
+      };
     
-//Should I pass an index with the prop so I can mark them complete individually?
-
-    };
-
     return (
         
         <View style={styles.item}>
-            <CheckBox value={isCompleted} onValueChange={(isCompleted) =>setSelection(isCompleted)} style={styles.circleRight}></CheckBox>
-            {console.log(isCompleted)}
-            <Text style={styles.taskText}>{props.text}</Text>
-            <View style={styles.iconLeft}>
-                <TouchableOpacity style={styles.square}> X </TouchableOpacity>
-            </View>
+            <CheckBox value={isCompleted} onValueChange={isCompleted => setSelection(isCompleted)} style={styles.circleRight}></CheckBox>
+            <Text style={isCompleted ? (styles.taskText2) : (styles.taskText) }>{props.text}</Text>
+            {//<View style={styles.iconLeft}>}
+            }
+            <TouchableOpacity style={styles.square} >
+              <Text> X </Text>
+            </TouchableOpacity>
+            {//</View> 
+            }
         </View>
 
 

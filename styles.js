@@ -14,7 +14,6 @@ export const styles = StyleSheet.create({
     },
     sectionTitle: {
         fontSize: 48, 
-        fontFamily: "verdana",
         fontWeight: "bold",
         alignSelf: "center",
         marginBottom: 15,
@@ -49,10 +48,17 @@ export const styles = StyleSheet.create({
     taskText: {
       flex: 3,
       fontSize: 14,
-      fontFamily: "verdana",
       maxWidth: "80%",
       justifyContent: "flex-start",
       color: "#FFFFFF"
+    },
+    taskText2: {
+      flex: 3,
+      fontSize: 14,
+      maxWidth: "80%",
+      justifyContent: "flex-start",
+      color: "#FFFFFF",
+      textDecorationLine: "line-through" 
     },
     circleRight: {
       width: 26,
@@ -60,7 +66,6 @@ export const styles = StyleSheet.create({
       borderWidth: 2,
       borderColor: '#FFFFFF',
       backgroundColor: '#FFFFFF',
-      cursor: "pointer",
       marginRight: 15
     },
     WriteTaskWrapper: {

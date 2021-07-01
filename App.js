@@ -13,19 +13,9 @@ export default function App() {
 
   const handleAddTask = () => {
     Keyboard.dismiss();
-    setTaskItems([...taskItems, task])
-    setTask(null)
-    console.log(task)
-    console.log(taskItems.map)
- 
-      };
-
-  const deleteTask = (index) => {
-    let itemsCopy = [...taskItems];
-    itemsCopy.splice(index, 1);
-    setTaskItems(itemsCopy);
+    setTaskItems([...taskItems, task]);
+    setTask("");
   };
-  
 
   return (
     <View style={styles.container}>
@@ -36,8 +26,8 @@ export default function App() {
 
         <View style={styles.items}>
           {/* The items will go in here
-            The map method creates a new array populated with the rsults of calling a provided function on every element in the calling array */
-          taskItems.map((item,index) => {
+            The map method creates a new array populated with the results of calling a provided function on every element in the calling array */
+            taskItems.map((item,index) => {
             return <Task text={item} key={index} />
             })
                    
@@ -69,6 +59,4 @@ export default function App() {
 
     </View>
   );
-}
-
-
+};
