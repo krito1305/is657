@@ -17,6 +17,12 @@ export default function App() {
     setTask("");
   };
 
+  const deleteTask = (index) => {
+    let itemsCopy = [...taskItems];
+    itemsCopy.splice(index,1);
+    setTaskItems(itemsCopy);
+  }
+
   return (
     <View style={styles.container}>
       

@@ -5,27 +5,18 @@ import { styles } from '../styles';
 
 
 
-function Task(props, index, item) {
+function Task(props) {
     const [isCompleted, setSelection] = useState(false);
 
-
-      const deleteTask = (index) => {
-        console.log(index)
-
-      };
     
     return (
         
         <View style={styles.item}>
             <CheckBox value={isCompleted} onValueChange={isCompleted => setSelection(isCompleted)} style={styles.circleRight}></CheckBox>
             <Text style={isCompleted ? (styles.taskText2) : (styles.taskText) }>{props.text}</Text>
-            {//<View style={styles.iconLeft}>}
-            }
             <TouchableOpacity style={styles.square} >
               <Text> X </Text>
-            </TouchableOpacity>
-            {//</View> 
-            }
+            </TouchableOpacity> 
         </View>
 
 
